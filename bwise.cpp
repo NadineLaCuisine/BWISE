@@ -80,9 +80,9 @@ int main(int argc, char *argv[]) {
 		help();
 		exit(0);
 	}
-	c=system(("mkdir "+workingFolder).c_str());
+	c=system(("mkdir -p "+workingFolder).c_str());
 	c=chdir(workingFolder.c_str());
-	c=system("mkdir logs");
+	c=system("mkdir -p logs");
 	ofstream param("ParametersUsed.txt");
 	ofstream bankBcalm("bankBcalm.txt");
 	param<<"kmax: "<<kMax<<" solidity: "<<solidity<<" unitig solidity: "<<unitigFilter<<" SRcleaning: "<<superReadsCleaning<<" correction steps: "<<correctionStep<<endl;

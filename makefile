@@ -21,11 +21,6 @@ EXEC=bwise n50 sequencesToNumbers numbersToSequences numbersFilter
 
 all: $(EXEC)
 
-n50.o: N50.cpp
-	 $(CC) -o $@ -c $< $(CFLAGS)
-
-bwise.o: Bwise.cpp
-	$(CC) -o $@ -c $< $(CFLAGS)
 
 bwise: bwise.o
 	$(CC) -o $@ $^ $(LDFLAGS)
@@ -33,23 +28,17 @@ bwise: bwise.o
 n50: n50.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-sequencesToNumbers.o: sequencesToNumbers.cpp
-	$(CC) -o $@ -c $< $(CFLAGS)
-
 sequencesToNumbers: sequencesToNumbers.o
 	$(CC) -o $@ $^ $(LDFLAGS)
-
-numbersFilter.o: numbersFilter.cpp
-	$(CC) -o $@ -c $< $(CFLAGS)
 
 numbersFilter: numbersFilter.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-numbersToSequences.o: numbersToSequences.cpp
-	$(CC) -o $@ -c $< $(CFLAGS)
-
 numbersToSequences: numbersToSequences.o
 	$(CC) -o $@ $^ $(LDFLAGS)
+
+%.o: %.cpp %.h
+	$(CXX) -o $@ -c $< $(CFLAGS)
 
 
 clean:

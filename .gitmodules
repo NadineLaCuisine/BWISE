@@ -1,0 +1,15 @@
+[submodule "bloocoo"]
+	path = bloocoo
+	url = https://github.com/GATB/bloocoo.git
+[submodule "bcalm"]
+	path = bcalm
+	url = https://github.com/GATB/bcalm
+[submodule "BGREAT2"]
+	path = BGREAT2
+	url = https://github.com/Malfoy/BGREAT2
+[submodule "BREADY"]
+	path = BREADY
+	url = https://github.com/Malfoy/BREADY
+[submodule "kMILL"]
+	path = kMILL
+	url = https://github.com/kamimrcht/kMILL
